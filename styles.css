@@ -9,7 +9,6 @@ body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    border: 1px solid magenta;
 }
 
 .container-nav {
@@ -35,9 +34,20 @@ h1 {
 /* LAYOUT */
 
 header {
-    background: pink;
+    background: rgb(233, 233, 233);
     padding: 2em 0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+}
+
+/* always have media query after given selector */
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
 }
 
 nav ul {
@@ -70,4 +80,14 @@ nav a:focus {
 
 .current-page:hover {
     color: #707070;
+}
+
+@media (max-width: 675px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: .5em 0;
+    }
 }
